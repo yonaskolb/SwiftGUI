@@ -10,12 +10,16 @@ public struct EditorView: View {
     private let typeInfo: TypeInfo
 
     public init<T>(_ binding: Binding<T>) {
-        self._object = binding.map(
-            get: { $0 as Any },
-            set: { $0 as! T })
+        let anyBinding = binding.map(
+        get: { $0 as Any },
+        set: { $0 as! T })
+        self.init(anyBinding: anyBinding)
+    }
+
+    init(anyBinding binding: Binding<Any>) {
         let object = binding.wrappedValue
-        let typeInfo = try! Runtime.typeInfo(of: type(of: object))
-        self.typeInfo = typeInfo
+        self._object = binding
+        self.typeInfo = try! Runtime.typeInfo(of: type(of: object))
         name = santizedType(of: object)
 
         properties = typeInfo.properties.map {
@@ -140,9 +144,9 @@ public struct EditorView: View {
                 Text(value.count.description)
             }
         default:
-            if typeInfo.kind == .struct ||  typeInfo.kind == .class {
+            if property.typeInfo.kind == .struct || property.typeInfo.kind == .class {
                 let objectBinding = binding(property.propertyInfo) as Binding<Any>
-                let editor = EditorView(objectBinding)
+                let editor = EditorView(anyBinding: objectBinding)
                     .navigationBarTitle(property.id)
                 return NavigationLink(destination: editor) {
                     propertyRow(property, simple: true) { EmptyView() }

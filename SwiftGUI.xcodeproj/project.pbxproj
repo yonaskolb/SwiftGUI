@@ -10,7 +10,7 @@
 		CC15793C2404994600185C2E /* SwiftGUI.h in Headers */ = {isa = PBXBuildFile; fileRef = CC15793A2404994600185C2E /* SwiftGUI.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CC15794424049E0000185C2E /* Runtime in Frameworks */ = {isa = PBXBuildFile; productRef = CC15794324049E0000185C2E /* Runtime */; };
 		CC15794724049E2900185C2E /* URLImage in Frameworks */ = {isa = PBXBuildFile; productRef = CC15794624049E2900185C2E /* URLImage */; };
-		CC15794924049E3D00185C2E /* EditorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC15794824049E3D00185C2E /* EditorView.swift */; };
+		CC15794924049E3D00185C2E /* ObjectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC15794824049E3D00185C2E /* ObjectView.swift */; };
 		CC15794B24049E5C00185C2E /* SanitizedType.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC15794A24049E5C00185C2E /* SanitizedType.swift */; };
 		CC15794D24049E7000185C2E /* SwiftUIExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC15794C24049E7000185C2E /* SwiftUIExtensions.swift */; };
 		CC15795524049F7700185C2E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC15795424049F7700185C2E /* AppDelegate.swift */; };
@@ -23,6 +23,10 @@
 		CC15796824049F9100185C2E /* SwiftGUI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CC1579372404994600185C2E /* SwiftGUI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		CC15796D24049FA700185C2E /* TestObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC15796C24049FA700185C2E /* TestObject.swift */; };
 		CC15796F2404A64600185C2E /* Property.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC15796E2404A64600185C2E /* Property.swift */; };
+		CCDDCAD224068BBE00DDA3C2 /* ArrayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCDDCAD124068BBD00DDA3C2 /* ArrayView.swift */; };
+		CCDDCAD424068DCE00DDA3C2 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCDDCAD324068DCE00DDA3C2 /* Config.swift */; };
+		CCDDCAD6240E790B00DDA3C2 /* EnumView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCDDCAD5240E790B00DDA3C2 /* EnumView.swift */; };
+		CCDDCAD8240E877200DDA3C2 /* SwiftView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCDDCAD7240E877200DDA3C2 /* SwiftView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,7 +57,7 @@
 		CC1579372404994600185C2E /* SwiftGUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftGUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC15793A2404994600185C2E /* SwiftGUI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwiftGUI.h; sourceTree = "<group>"; };
 		CC15793B2404994600185C2E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CC15794824049E3D00185C2E /* EditorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditorView.swift; sourceTree = "<group>"; };
+		CC15794824049E3D00185C2E /* ObjectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectView.swift; sourceTree = "<group>"; };
 		CC15794A24049E5C00185C2E /* SanitizedType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SanitizedType.swift; sourceTree = "<group>"; };
 		CC15794C24049E7000185C2E /* SwiftUIExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIExtensions.swift; sourceTree = "<group>"; };
 		CC15795224049F7700185C2E /* Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -66,6 +70,10 @@
 		CC15796224049F7C00185C2E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CC15796C24049FA700185C2E /* TestObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestObject.swift; sourceTree = "<group>"; };
 		CC15796E2404A64600185C2E /* Property.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Property.swift; sourceTree = "<group>"; };
+		CCDDCAD124068BBD00DDA3C2 /* ArrayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayView.swift; sourceTree = "<group>"; };
+		CCDDCAD324068DCE00DDA3C2 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		CCDDCAD5240E790B00DDA3C2 /* EnumView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnumView.swift; sourceTree = "<group>"; };
+		CCDDCAD7240E877200DDA3C2 /* SwiftView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,13 +119,14 @@
 		CC1579392404994600185C2E /* SwiftGUI */ = {
 			isa = PBXGroup;
 			children = (
+				CCDDCAD9240E89EF00DDA3C2 /* Views */,
 				CC15793A2404994600185C2E /* SwiftGUI.h */,
 				CC15793B2404994600185C2E /* Info.plist */,
-				CC15794824049E3D00185C2E /* EditorView.swift */,
 				CC15794A24049E5C00185C2E /* SanitizedType.swift */,
 				CC15794C24049E7000185C2E /* SwiftUIExtensions.swift */,
 				CC15796C24049FA700185C2E /* TestObject.swift */,
 				CC15796E2404A64600185C2E /* Property.swift */,
+				CCDDCAD324068DCE00DDA3C2 /* Config.swift */,
 			);
 			path = SwiftGUI;
 			sourceTree = "<group>";
@@ -149,6 +158,17 @@
 			children = (
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CCDDCAD9240E89EF00DDA3C2 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				CC15794824049E3D00185C2E /* ObjectView.swift */,
+				CCDDCAD124068BBD00DDA3C2 /* ArrayView.swift */,
+				CCDDCAD5240E790B00DDA3C2 /* EnumView.swift */,
+				CCDDCAD7240E877200DDA3C2 /* SwiftView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -274,9 +294,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				CC15796F2404A64600185C2E /* Property.swift in Sources */,
+				CCDDCAD6240E790B00DDA3C2 /* EnumView.swift in Sources */,
 				CC15794D24049E7000185C2E /* SwiftUIExtensions.swift in Sources */,
-				CC15794924049E3D00185C2E /* EditorView.swift in Sources */,
+				CC15794924049E3D00185C2E /* ObjectView.swift in Sources */,
+				CCDDCAD424068DCE00DDA3C2 /* Config.swift in Sources */,
 				CC15794B24049E5C00185C2E /* SanitizedType.swift in Sources */,
+				CCDDCAD8240E877200DDA3C2 /* SwiftView.swift in Sources */,
+				CCDDCAD224068BBE00DDA3C2 /* ArrayView.swift in Sources */,
 				CC15796D24049FA700185C2E /* TestObject.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

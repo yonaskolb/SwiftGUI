@@ -15,7 +15,7 @@ struct ContentView: View {
 
     var body: some View {
         NavigationView {
-            EditorView($object)
+            SwiftView($object)
         }
     }
 }

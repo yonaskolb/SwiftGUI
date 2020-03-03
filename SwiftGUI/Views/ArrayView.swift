@@ -17,31 +17,11 @@ struct ArrayView: View {
         self._array = array
     }
 
-    func isLink(_ value: Any) -> Bool {
-        switch value {
-        case is Int: return false
-        case is Double: return false
-        case is Bool: return false
-        case is String: return false
-        case is URL: return false
-        default: return true
-        }
-    }
-
     var body: some View {
-        List(0..<array.count, rowContent: row)
-    }
-
-    func row(_ index: Int) -> some View {
-        let value = array[index]
-        return Group {
-            if isLink(value) {
-                NavigationLink(destination: ObjectView( self.$array[index])) {
-                    Text(String(describing: value)).lineLimit(1)
-                }
-            } else {
-                Text(String(describing: value)).lineLimit(1)
-            }
+        List(0..<array.count) { index in
+            Text(String(describing: self.array[index]))
+                .lineLimit(1)
+                .swiftLink(self.$array[index])
         }
     }
 }

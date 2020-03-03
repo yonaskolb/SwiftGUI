@@ -14,10 +14,10 @@ public struct TestObject {
     public var myAvatarURL: URL = URL(string: "https://randomuser.me/api/portraits/women/10.jpg")!
     public var myStruct: TestStruct = TestStruct()
     public var myClass: TestClass = TestClass()
-    public var myRawEnum: TestRawEnum = .one
-    public var myIntEnum: TestAssociatedEnum = .int(1)
-    public var myObjectEnum: TestAssociatedEnum = .object(TestStruct())
-    public var myMultiEnum: TestAssociatedEnum = .multi(true, object: TestStruct())
+    public var myRawEnum: RawEnum = .one
+    public var myIntEnum: AssociatedEnum = .int(1)
+    public var myObjectEnum: AssociatedEnum = .object(TestStruct())
+    public var myMultiEnum: AssociatedEnum = .multi(true, object: TestStruct())
 
     public var myOptionalBool: Bool? = true
     public var myOptionalString: String? = "hello"
@@ -27,7 +27,7 @@ public struct TestObject {
     public var myOptionalAvatarURL: URL? = URL(string: "https://randomuser.me/api/portraits/women/10.jpg")
     public var myOptionalStruct: TestStruct? = TestStruct()
     public var myOptionalClass: TestClass? = TestClass()
-    public var myOptionalRawEnum: TestRawEnum? = .one
+    public var myOptionalRawEnum: RawEnum? = .one
 
     public var myNilBool: Bool?
     public var myNilString: String?
@@ -45,19 +45,19 @@ public struct TestObject {
 
 public struct TestStruct: CustomStringConvertible {
     var name: String = "John"
-    public var description: String { "name: \(name)" }
+    public var description: String { name }
 }
 
 public class TestClass {
     var name: String = "John"
 }
 
-public enum TestRawEnum: Int {
+public enum RawEnum: Int {
     case one
     case two
 }
 
-public enum TestAssociatedEnum {
+public enum AssociatedEnum {
     case int(Int)
     case object(TestStruct)
     case multi(Bool, object: TestStruct)

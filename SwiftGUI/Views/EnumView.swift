@@ -66,8 +66,16 @@ private struct EnumRawView: View {
 private struct EnumAssociatedView: View {
 
     @Binding var enumValue: Any
-    let types: [(label: String, type: String, value: String, id: UUID)]
-    let singleValue: Bool
+    let types: [AssociatedType]
+    let singleValue: Any?
+
+    struct AssociatedType {
+        let label: String
+        let type: Any.Type
+        let typeName: String
+        let value: Any
+        let id: Int
+    }
 
     init(_ enumValueBinding: Binding<Any>) {
         let enumValue = enumValueBinding.wrappedValue
@@ -76,27 +84,36 @@ private struct EnumAssociatedView: View {
         let children = mirror.children.map { $0 }
         precondition(children.count == 1)
         let associatedMirror = Mirror(reflecting: children[0].value)
-        singleValue = associatedMirror.children.count == 0
-        types = associatedMirror.children.map {
-            let label = ($0.label ?? "").replacingOccurrences(of: #"\.\d"#, with: "", options: [.regularExpression], range: nil)
-            return (label, santizedType(of: $0.value), String(describing: $0.value), UUID())
+        if associatedMirror.children.count == 0 {
+            singleValue = children[0].value
+        } else {
+            singleValue = nil
+        }
+        types = associatedMirror.children.enumerated().map { index, value in
+            let label = (value.label ?? "").replacingOccurrences(of: #"\.\d"#, with: "", options: [.regularExpression], range: nil)
+            return AssociatedType(
+                label: label,
+                type: type(of: value.value),
+                typeName: santizedType(of: value.value),
+                value: value.value,
+                id: index)
         }
     }
 
     var body: some View {
         Group {
-            if singleValue {
-                SwiftView($enumValue)
+            if singleValue != nil {
+                SwiftView(anyBinding: .constant(singleValue!))
             } else {
                 List(types, id: \.id) { type in
                     HStack {
-                        if !type.label.isEmpty {
-                            Text("\(type.label):")
-                        }
-                        Text(type.type).bold()
+                        (Text(type.label.isEmpty ? "" : "\(type.label): ") +
+                        Text(type.typeName).bold())
                         Spacer()
-                        Text(type.value)
+                        Text(String(describing: type.value))
                     }
+                    .lineLimit(1)
+                    .swiftLink(.constant(type.value)) // TODO: editable
                 }
             }
         }
@@ -106,10 +123,10 @@ private struct EnumAssociatedView: View {
 struct EnumView_Previews: PreviewProvider {
     static var previews: some View {
         Group {
-            EnumView(.constant(TestRawEnum.one))
-            EnumView(.constant(TestAssociatedEnum.int(1)))
-            EnumView(.constant(TestAssociatedEnum.object(TestStruct())))
-            EnumView(.constant(TestAssociatedEnum.multi(true, object: TestStruct())))
+            EnumView(.constant(RawEnum.one))
+            EnumView(.constant(AssociatedEnum.int(1)))
+            EnumView(.constant(AssociatedEnum.object(TestStruct())))
+            EnumView(.constant(AssociatedEnum.multi(true, object: TestStruct())))
         }
     }
 }

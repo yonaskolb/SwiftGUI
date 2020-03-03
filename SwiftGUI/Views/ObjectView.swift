@@ -51,6 +51,7 @@ struct ObjectView: View {
                 Spacer()
                 content()
                     .disabled(!config.editing)
+                    .lineLimit(1)
             }.anyView
         } else {
             return VStack(alignment: .leading) {
@@ -121,10 +122,14 @@ struct ObjectView: View {
                     get: { $0.absoluteString },
                     set: { URL(string: $0)! }
             )
-
-            if property.name.lowercased().contains("picture") ||
-                property.name.lowercased().contains("avatar") ||
-                property.name.lowercased().contains("image") {
+            let imageNames: [String] = [
+                "picture",
+                "profilepic",
+                "avatar",
+                "profileimage",
+            ]
+            let isImageURL = imageNames.contains { property.name.lowercased().contains($0.lowercased()) }
+            if isImageURL {
                 let image = URLImage(url) { proxy in
                     proxy.image
                         .resizable()

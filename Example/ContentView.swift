@@ -11,17 +11,18 @@ import SwiftGUI
 
 struct ContentView: View {
 
+    let config: Config
     @State var object = TestObject()
 
     var body: some View {
         NavigationView {
-            SwiftView($object)
+            SwiftView(value: $object, config: config)
         }
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        ContentView(config: Config())
     }
 }

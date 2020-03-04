@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CC0D559D240FA2DE0045A55D /* UnknownView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0D559C240FA2DE0045A55D /* UnknownView.swift */; };
 		CC15793C2404994600185C2E /* SwiftGUI.h in Headers */ = {isa = PBXBuildFile; fileRef = CC15793A2404994600185C2E /* SwiftGUI.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CC15794424049E0000185C2E /* Runtime in Frameworks */ = {isa = PBXBuildFile; productRef = CC15794324049E0000185C2E /* Runtime */; };
 		CC15794724049E2900185C2E /* URLImage in Frameworks */ = {isa = PBXBuildFile; productRef = CC15794624049E2900185C2E /* URLImage */; };
@@ -54,6 +55,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		CC0D559C240FA2DE0045A55D /* UnknownView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnknownView.swift; sourceTree = "<group>"; };
 		CC1579372404994600185C2E /* SwiftGUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftGUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC15793A2404994600185C2E /* SwiftGUI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwiftGUI.h; sourceTree = "<group>"; };
 		CC15793B2404994600185C2E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -167,6 +169,7 @@
 				CCDDCAD124068BBD00DDA3C2 /* ArrayView.swift */,
 				CCDDCAD5240E790B00DDA3C2 /* EnumView.swift */,
 				CCDDCAD7240E877200DDA3C2 /* SwiftView.swift */,
+				CC0D559C240FA2DE0045A55D /* UnknownView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -295,6 +298,7 @@
 			files = (
 				CC15796F2404A64600185C2E /* Property.swift in Sources */,
 				CCDDCAD6240E790B00DDA3C2 /* EnumView.swift in Sources */,
+				CC0D559D240FA2DE0045A55D /* UnknownView.swift in Sources */,
 				CC15794D24049E7000185C2E /* SwiftUIExtensions.swift in Sources */,
 				CC15794924049E3D00185C2E /* ObjectView.swift in Sources */,
 				CCDDCAD424068DCE00DDA3C2 /* Config.swift in Sources */,

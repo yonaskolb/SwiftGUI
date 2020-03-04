@@ -103,7 +103,7 @@ private struct EnumAssociatedView: View {
     var body: some View {
         Group {
             if singleValue != nil {
-                SwiftView(anyBinding: .constant(singleValue!))
+                UnknownView(value: .constant(singleValue!))
             } else {
                 List(types, id: \.id) { type in
                     HStack {

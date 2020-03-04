@@ -63,6 +63,9 @@ struct ObjectView: View {
     }
 
     func propertyEditor(_ property: Property) -> AnyView {
+        if let view = config.getPropertyRenderer(for: property) {
+            return view
+        }
         switch property.value {
         case let string as String:
             return propertyRow(property, simple: false) {

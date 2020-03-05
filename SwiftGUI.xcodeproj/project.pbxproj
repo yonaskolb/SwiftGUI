@@ -8,9 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		CC0D559D240FA2DE0045A55D /* UnknownView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0D559C240FA2DE0045A55D /* UnknownView.swift */; };
+		CC0D559F241128EF0045A55D /* PropertyPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0D559E241128EF0045A55D /* PropertyPreview.swift */; };
+		CC0D55A124112B650045A55D /* URLImagePropertyPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0D55A024112B650045A55D /* URLImagePropertyPreview.swift */; };
+		CC0D55A3241130820045A55D /* URLImage in Frameworks */ = {isa = PBXBuildFile; productRef = CC0D55A2241130820045A55D /* URLImage */; };
+		CC0D55A5241133250045A55D /* DefaultPropertyPreviews.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0D55A4241133250045A55D /* DefaultPropertyPreviews.swift */; };
 		CC15793C2404994600185C2E /* SwiftGUI.h in Headers */ = {isa = PBXBuildFile; fileRef = CC15793A2404994600185C2E /* SwiftGUI.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CC15794424049E0000185C2E /* Runtime in Frameworks */ = {isa = PBXBuildFile; productRef = CC15794324049E0000185C2E /* Runtime */; };
-		CC15794724049E2900185C2E /* URLImage in Frameworks */ = {isa = PBXBuildFile; productRef = CC15794624049E2900185C2E /* URLImage */; };
 		CC15794924049E3D00185C2E /* ObjectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC15794824049E3D00185C2E /* ObjectView.swift */; };
 		CC15794B24049E5C00185C2E /* SanitizedType.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC15794A24049E5C00185C2E /* SanitizedType.swift */; };
 		CC15794D24049E7000185C2E /* SwiftUIExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC15794C24049E7000185C2E /* SwiftUIExtensions.swift */; };
@@ -56,6 +59,9 @@
 
 /* Begin PBXFileReference section */
 		CC0D559C240FA2DE0045A55D /* UnknownView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnknownView.swift; sourceTree = "<group>"; };
+		CC0D559E241128EF0045A55D /* PropertyPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyPreview.swift; sourceTree = "<group>"; };
+		CC0D55A024112B650045A55D /* URLImagePropertyPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLImagePropertyPreview.swift; sourceTree = "<group>"; };
+		CC0D55A4241133250045A55D /* DefaultPropertyPreviews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultPropertyPreviews.swift; sourceTree = "<group>"; };
 		CC1579372404994600185C2E /* SwiftGUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftGUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC15793A2404994600185C2E /* SwiftGUI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwiftGUI.h; sourceTree = "<group>"; };
 		CC15793B2404994600185C2E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -83,7 +89,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CC15794724049E2900185C2E /* URLImage in Frameworks */,
 				CC15794424049E0000185C2E /* Runtime in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -92,6 +97,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CC0D55A3241130820045A55D /* URLImage in Frameworks */,
 				CC15796724049F9100185C2E /* SwiftGUI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -143,6 +149,7 @@
 				CC15795F24049F7C00185C2E /* LaunchScreen.storyboard */,
 				CC15796224049F7C00185C2E /* Info.plist */,
 				CC15795C24049F7C00185C2E /* Preview Content */,
+				CC0D55A024112B650045A55D /* URLImagePropertyPreview.swift */,
 			);
 			path = Example;
 			sourceTree = "<group>";
@@ -170,6 +177,8 @@
 				CCDDCAD5240E790B00DDA3C2 /* EnumView.swift */,
 				CCDDCAD7240E877200DDA3C2 /* SwiftView.swift */,
 				CC0D559C240FA2DE0045A55D /* UnknownView.swift */,
+				CC0D559E241128EF0045A55D /* PropertyPreview.swift */,
+				CC0D55A4241133250045A55D /* DefaultPropertyPreviews.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -204,7 +213,6 @@
 			name = SwiftGUI;
 			packageProductDependencies = (
 				CC15794324049E0000185C2E /* Runtime */,
-				CC15794624049E2900185C2E /* URLImage */,
 			);
 			productName = SwiftGUI;
 			productReference = CC1579372404994600185C2E /* SwiftGUI.framework */;
@@ -225,6 +233,9 @@
 				CC15796A24049F9100185C2E /* PBXTargetDependency */,
 			);
 			name = Example;
+			packageProductDependencies = (
+				CC0D55A2241130820045A55D /* URLImage */,
+			);
 			productName = Example;
 			productReference = CC15795224049F7700185C2E /* Example.app */;
 			productType = "com.apple.product-type.application";
@@ -303,9 +314,11 @@
 				CC15794924049E3D00185C2E /* ObjectView.swift in Sources */,
 				CCDDCAD424068DCE00DDA3C2 /* Config.swift in Sources */,
 				CC15794B24049E5C00185C2E /* SanitizedType.swift in Sources */,
+				CC0D55A5241133250045A55D /* DefaultPropertyPreviews.swift in Sources */,
 				CCDDCAD8240E877200DDA3C2 /* SwiftView.swift in Sources */,
 				CCDDCAD224068BBE00DDA3C2 /* ArrayView.swift in Sources */,
 				CC15796D24049FA700185C2E /* TestObject.swift in Sources */,
+				CC0D559F241128EF0045A55D /* PropertyPreview.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -314,6 +327,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CC15795524049F7700185C2E /* AppDelegate.swift in Sources */,
+				CC0D55A124112B650045A55D /* URLImagePropertyPreview.swift in Sources */,
 				CC15795724049F7700185C2E /* SceneDelegate.swift in Sources */,
 				CC15795924049F7700185C2E /* ContentView.swift in Sources */,
 			);
@@ -604,15 +618,15 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		CC0D55A2241130820045A55D /* URLImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CC15794524049E2900185C2E /* XCRemoteSwiftPackageReference "url-image" */;
+			productName = URLImage;
+		};
 		CC15794324049E0000185C2E /* Runtime */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = CC15794224049E0000185C2E /* XCRemoteSwiftPackageReference "Runtime" */;
 			productName = Runtime;
-		};
-		CC15794624049E2900185C2E /* URLImage */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = CC15794524049E2900185C2E /* XCRemoteSwiftPackageReference "url-image" */;
-			productName = URLImage;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

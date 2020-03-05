@@ -21,8 +21,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
 
         // Create the SwiftUI view that provides the window contents.
-        let config = Config(allowEditingToggle: true)
-        
+        let config = Config.default
+        config.allowEditingToggle = true
+        config.addPropertyPreview(URLImagePropertyPreview())
+
         let contentView = ContentView(config: config)
 
         // Use a UIHostingController as window root view controller.

@@ -13,10 +13,27 @@ struct ContentView: View {
 
     let config: Config
     @State var object = TestObject()
+    @State var openObject = false
+
+    var objectDump: String {
+        var string = ""
+        dump(object, to: &string)
+        return string
+    }
 
     var body: some View {
-        NavigationView {
-            SwiftView(value: $object, config: config)
+        ScrollView {
+            VStack(spacing: 20) {
+                Button("Open Object") {
+                    self.openObject = true
+                }
+                Text(objectDump)
+                .sheet(isPresented: $openObject) {
+                    NavigationView {
+                        SwiftView(value: self.$object, config: self.config)
+                    }
+                }
+            }.padding()
         }
     }
 }

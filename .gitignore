@@ -1,1 +1,2 @@
-SwiftGUI.xcodeproj/xcuserdata
+**/xcuserdata
+**/.DS_Store

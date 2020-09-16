@@ -28,29 +28,31 @@ struct ObjectView: View {
         )
     }
 
-    func propertyRow<V: View>(_ property: Property, axis: Axis = .horizontal, @ViewBuilder content: () -> V) -> AnyView {
-        let info = (
-            Text("\(property.name): ") +
-                Text(property.typeName)
-                    .bold()
-            )
-            .lineLimit(1)
+    func propertyRow<V: View>(_ property: Property, axis: Axis = .horizontal, @ViewBuilder content: () -> V) -> some View {
 
-        if axis == .horizontal {
-            return HStack {
-                info
-                    .layoutPriority(1)
-                Spacer()
-                content()
-                    .disabled(!config.editing)
-                    .lineLimit(1)
-            }.anyView
-        } else {
-            return VStack(alignment: .leading) {
-                info
-                content()
-                    .disabled(!config.editing)
-            }.anyView
+        func info() -> some View {
+            (Text("\(property.name): ") + Text(property.typeName).bold())
+            .lineLimit(1)
+        }
+
+        let contentView = content()
+            .disabled(!config.editing)
+
+        return Group {
+            if axis == .horizontal {
+                HStack {
+                    info()
+                        .layoutPriority(1)
+                    Spacer()
+                    contentView
+                        .lineLimit(1)
+                }
+            } else {
+                VStack(alignment: .leading) {
+                    info()
+                    contentView
+                }
+            }
         }
     }
 

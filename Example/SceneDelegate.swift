@@ -22,6 +22,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
         // Create the SwiftUI view that provides the window contents.
         let config = Config.default
+        config.editing = true
         config.allowEditingToggle = true
         config.addPropertyPreview(URLImagePropertyPreview())
 

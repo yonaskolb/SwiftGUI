@@ -118,7 +118,7 @@ struct ObjectView: View {
             self.propertyEditor(property)
         }
         .navigationBarTitle(Text(name), displayMode: .inline)
-        .navigationBarItems(trailing: editButton)
+        //.navigationBarItems(trailing: editButton)
     }
 }
 
@@ -128,6 +128,7 @@ struct EditView_Previews: PreviewProvider {
         Group {
             NavigationView {
                 ObjectView(.constant(TestObject()))
+                    .environmentObject(Config(editing: true))
             }
         }
     }

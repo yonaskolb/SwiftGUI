@@ -59,8 +59,11 @@ struct ObjectView: View {
     func propertyEditor(_ property: Property) -> AnyView {
 
         func navigation<D: View, C: View>(_ destination: D, @ViewBuilder content: () -> C) -> AnyView {
-            NavigationLink(destination: destination.navigationBarTitle(property.name)) {
+            NavigationLink(destination: destination
+                            .environmentObject(config)
+                            .navigationBarTitle(property.name)) {
                content()
+
                 //.navigationBarItems(trailing: editButton)
             }.anyView
         }

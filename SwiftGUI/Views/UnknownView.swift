@@ -52,12 +52,12 @@ func isSimpleType(_ value: Any) -> Bool {
 
 extension View {
 
-    func swiftLink(_ binding: Binding<Any>) -> some View {
+    func swiftLink(_ binding: Binding<Any>, config: Config) -> some View {
         Group {
             if isSimpleType(binding.wrappedValue) {
                 self
             } else {
-                NavigationLink(destination: UnknownView(value: binding)) {
+                NavigationLink(destination: UnknownView(value: binding).environmentObject(config)) {
                     self
                 }
             }

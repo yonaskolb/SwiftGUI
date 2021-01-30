@@ -66,6 +66,7 @@ private struct EnumRawView: View {
 private struct EnumAssociatedView: View {
 
     @Binding var enumValue: Any
+    @EnvironmentObject var config: Config
     let types: [AssociatedType]
     let singleValue: Any?
 
@@ -113,7 +114,7 @@ private struct EnumAssociatedView: View {
                         Text(String(describing: type.value))
                     }
                     .lineLimit(1)
-                    .swiftLink(.constant(type.value)) // TODO: editable
+                    .swiftLink(.constant(type.value), config: config) // TODO: editable
                 }
             }
         }

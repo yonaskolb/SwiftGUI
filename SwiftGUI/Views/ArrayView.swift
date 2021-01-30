@@ -12,6 +12,7 @@ import Runtime
 struct ArrayView: View {
 
     @Binding var array: [Any]
+    @EnvironmentObject var config: Config
 
     init(array: Binding<[Any]>) {
         self._array = array
@@ -21,7 +22,7 @@ struct ArrayView: View {
         List(0..<array.count) { index in
             Text(String(describing: self.array[index]))
                 .lineLimit(1)
-                .swiftLink(self.$array[index])
+                .swiftLink(self.$array[index], config: config)
         }
     }
 }

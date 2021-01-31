@@ -41,6 +41,6 @@ public struct SwiftView: View {
 
 struct SwiftView_Previews: PreviewProvider {
     static var previews: some View {
-        SwiftView(value: .constant(TestObject() as Any))
+        SwiftView(value: .constant(TestObject()), config: Config(editing: true))
     }
 }

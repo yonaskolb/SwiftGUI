@@ -15,15 +15,12 @@ public class Config: ObservableObject {
     @Published public var allowEditingToggle: Bool
     var propertyPreviews: [PropertyPreviewRenderer] = []
 
-    public static let `default`: Config = {
-        let config = Config()
-        config.addDefaultPropertyPreviews()
-        return config
-    }()
-
-    public init(editing: Bool = false, allowEditingToggle: Bool = false) {
+    public init(editing: Bool = true, allowEditingToggle: Bool = false, addDefaultProperties: Bool = true) {
         self.editing = editing
         self.allowEditingToggle = allowEditingToggle
+        if addDefaultProperties {
+            addDefaultPropertyPreviews()
+        }
     }
 
     public func addDefaultPropertyPreviews() {

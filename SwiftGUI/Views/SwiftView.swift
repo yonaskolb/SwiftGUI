@@ -31,16 +31,16 @@ public struct SwiftView: View {
     }
 
     public var body: some View {
-        UnknownView(value: $value)
-        .environmentObject(config)
-        .navigationBarTitle(Text(name), displayMode: .inline)
+        NavigationView {
+            UnknownView(value: $value)
+            .environmentObject(config)
+            .navigationBarTitle(Text(name), displayMode: .inline)
+        }
     }
 }
 
 struct SwiftView_Previews: PreviewProvider {
     static var previews: some View {
-        NavigationView {
-            SwiftView(value: .constant(TestObject() as Any))
-        }
+        SwiftView(value: .constant(TestObject() as Any))
     }
 }

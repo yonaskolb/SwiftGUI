@@ -9,6 +9,7 @@
 import SwiftUI
 import Runtime
 
+/// Put inside a NavigationView
 public struct SwiftView: View {
 
     @Binding var value: Any
@@ -31,16 +32,16 @@ public struct SwiftView: View {
     }
 
     public var body: some View {
-        NavigationView {
-            UnknownView(value: $value)
-            .environmentObject(config)
-            .navigationBarTitle(Text(name), displayMode: .inline)
-        }
+        UnknownView(value: $value)
+        .environmentObject(config)
+        .navigationBarTitle(Text(name), displayMode: .inline)
     }
 }
 
 struct SwiftView_Previews: PreviewProvider {
     static var previews: some View {
-        SwiftView(value: .constant(TestObject()), config: Config(editing: true))
+        NavigationView {
+            SwiftView(value: .constant(TestObject()), config: Config(editing: true))
+        }
     }
 }

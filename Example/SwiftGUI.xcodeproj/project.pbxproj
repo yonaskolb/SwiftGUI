@@ -7,41 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		CC0D559D240FA2DE0045A55D /* UnknownView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0D559C240FA2DE0045A55D /* UnknownView.swift */; };
-		CC0D559F241128EF0045A55D /* PropertyPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0D559E241128EF0045A55D /* PropertyPreview.swift */; };
+		02699F8F25E4A06C0062884D /* SwiftGUI in Frameworks */ = {isa = PBXBuildFile; productRef = 02699F8E25E4A06C0062884D /* SwiftGUI */; };
 		CC0D55A124112B650045A55D /* URLImagePropertyPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0D55A024112B650045A55D /* URLImagePropertyPreview.swift */; };
 		CC0D55A3241130820045A55D /* URLImage in Frameworks */ = {isa = PBXBuildFile; productRef = CC0D55A2241130820045A55D /* URLImage */; };
-		CC0D55A5241133250045A55D /* DefaultPropertyPreviews.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0D55A4241133250045A55D /* DefaultPropertyPreviews.swift */; };
-		CC15793C2404994600185C2E /* SwiftGUI.h in Headers */ = {isa = PBXBuildFile; fileRef = CC15793A2404994600185C2E /* SwiftGUI.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		CC15794424049E0000185C2E /* Runtime in Frameworks */ = {isa = PBXBuildFile; productRef = CC15794324049E0000185C2E /* Runtime */; };
-		CC15794924049E3D00185C2E /* ObjectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC15794824049E3D00185C2E /* ObjectView.swift */; };
-		CC15794B24049E5C00185C2E /* SanitizedType.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC15794A24049E5C00185C2E /* SanitizedType.swift */; };
-		CC15794D24049E7000185C2E /* SwiftUIExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC15794C24049E7000185C2E /* SwiftUIExtensions.swift */; };
 		CC15795524049F7700185C2E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC15795424049F7700185C2E /* AppDelegate.swift */; };
 		CC15795724049F7700185C2E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC15795624049F7700185C2E /* SceneDelegate.swift */; };
 		CC15795924049F7700185C2E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC15795824049F7700185C2E /* ContentView.swift */; };
 		CC15795B24049F7C00185C2E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC15795A24049F7C00185C2E /* Assets.xcassets */; };
 		CC15795E24049F7C00185C2E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC15795D24049F7C00185C2E /* Preview Assets.xcassets */; };
 		CC15796124049F7C00185C2E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC15795F24049F7C00185C2E /* LaunchScreen.storyboard */; };
-		CC15796724049F9100185C2E /* SwiftGUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC1579372404994600185C2E /* SwiftGUI.framework */; };
-		CC15796824049F9100185C2E /* SwiftGUI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CC1579372404994600185C2E /* SwiftGUI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		CC15796D24049FA700185C2E /* TestObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC15796C24049FA700185C2E /* TestObject.swift */; };
-		CC15796F2404A64600185C2E /* Property.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC15796E2404A64600185C2E /* Property.swift */; };
-		CCDDCAD224068BBE00DDA3C2 /* ArrayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCDDCAD124068BBD00DDA3C2 /* ArrayView.swift */; };
-		CCDDCAD424068DCE00DDA3C2 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCDDCAD324068DCE00DDA3C2 /* Config.swift */; };
-		CCDDCAD6240E790B00DDA3C2 /* EnumView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCDDCAD5240E790B00DDA3C2 /* EnumView.swift */; };
-		CCDDCAD8240E877200DDA3C2 /* SwiftView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCDDCAD7240E877200DDA3C2 /* SwiftView.swift */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		CC15796924049F9100185C2E /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = CC15792E2404994600185C2E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = CC1579362404994600185C2E;
-			remoteInfo = SwiftGUI;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		CC15796B24049F9100185C2E /* Embed Frameworks */ = {
@@ -50,7 +25,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				CC15796824049F9100185C2E /* SwiftGUI.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -58,16 +32,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		CC0D559C240FA2DE0045A55D /* UnknownView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnknownView.swift; sourceTree = "<group>"; };
-		CC0D559E241128EF0045A55D /* PropertyPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyPreview.swift; sourceTree = "<group>"; };
+		02699F8D25E4A04A0062884D /* SwiftGUI */ = {isa = PBXFileReference; lastKnownFileType = folder; name = SwiftGUI; path = ..; sourceTree = "<group>"; };
 		CC0D55A024112B650045A55D /* URLImagePropertyPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLImagePropertyPreview.swift; sourceTree = "<group>"; };
-		CC0D55A4241133250045A55D /* DefaultPropertyPreviews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultPropertyPreviews.swift; sourceTree = "<group>"; };
-		CC1579372404994600185C2E /* SwiftGUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftGUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		CC15793A2404994600185C2E /* SwiftGUI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwiftGUI.h; sourceTree = "<group>"; };
-		CC15793B2404994600185C2E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CC15794824049E3D00185C2E /* ObjectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectView.swift; sourceTree = "<group>"; };
-		CC15794A24049E5C00185C2E /* SanitizedType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SanitizedType.swift; sourceTree = "<group>"; };
-		CC15794C24049E7000185C2E /* SwiftUIExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIExtensions.swift; sourceTree = "<group>"; };
 		CC15795224049F7700185C2E /* Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC15795424049F7700185C2E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CC15795624049F7700185C2E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -76,29 +42,15 @@
 		CC15795D24049F7C00185C2E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		CC15796024049F7C00185C2E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CC15796224049F7C00185C2E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CC15796C24049FA700185C2E /* TestObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestObject.swift; sourceTree = "<group>"; };
-		CC15796E2404A64600185C2E /* Property.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Property.swift; sourceTree = "<group>"; };
-		CCDDCAD124068BBD00DDA3C2 /* ArrayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayView.swift; sourceTree = "<group>"; };
-		CCDDCAD324068DCE00DDA3C2 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
-		CCDDCAD5240E790B00DDA3C2 /* EnumView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnumView.swift; sourceTree = "<group>"; };
-		CCDDCAD7240E877200DDA3C2 /* SwiftView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		CC1579342404994600185C2E /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				CC15794424049E0000185C2E /* Runtime in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		CC15794F24049F7700185C2E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				02699F8F25E4A06C0062884D /* SwiftGUI in Frameworks */,
 				CC0D55A3241130820045A55D /* URLImage in Frameworks */,
-				CC15796724049F9100185C2E /* SwiftGUI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -108,7 +60,7 @@
 		CC15792D2404994600185C2E = {
 			isa = PBXGroup;
 			children = (
-				CC1579392404994600185C2E /* SwiftGUI */,
+				02699F8D25E4A04A0062884D /* SwiftGUI */,
 				CC15795324049F7700185C2E /* Example */,
 				CC1579382404994600185C2E /* Products */,
 				CC15796624049F9100185C2E /* Frameworks */,
@@ -118,25 +70,9 @@
 		CC1579382404994600185C2E /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				CC1579372404994600185C2E /* SwiftGUI.framework */,
 				CC15795224049F7700185C2E /* Example.app */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		CC1579392404994600185C2E /* SwiftGUI */ = {
-			isa = PBXGroup;
-			children = (
-				CCDDCAD9240E89EF00DDA3C2 /* Views */,
-				CC15793A2404994600185C2E /* SwiftGUI.h */,
-				CC15793B2404994600185C2E /* Info.plist */,
-				CC15794A24049E5C00185C2E /* SanitizedType.swift */,
-				CC15794C24049E7000185C2E /* SwiftUIExtensions.swift */,
-				CC15796C24049FA700185C2E /* TestObject.swift */,
-				CC15796E2404A64600185C2E /* Property.swift */,
-				CCDDCAD324068DCE00DDA3C2 /* Config.swift */,
-			);
-			path = SwiftGUI;
 			sourceTree = "<group>";
 		};
 		CC15795324049F7700185C2E /* Example */ = {
@@ -151,7 +87,7 @@
 				CC15795C24049F7C00185C2E /* Preview Content */,
 				CC0D55A024112B650045A55D /* URLImagePropertyPreview.swift */,
 			);
-			path = Example;
+			name = Example;
 			sourceTree = "<group>";
 		};
 		CC15795C24049F7C00185C2E /* Preview Content */ = {
@@ -169,55 +105,9 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		CCDDCAD9240E89EF00DDA3C2 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				CC15794824049E3D00185C2E /* ObjectView.swift */,
-				CCDDCAD124068BBD00DDA3C2 /* ArrayView.swift */,
-				CCDDCAD5240E790B00DDA3C2 /* EnumView.swift */,
-				CCDDCAD7240E877200DDA3C2 /* SwiftView.swift */,
-				CC0D559C240FA2DE0045A55D /* UnknownView.swift */,
-				CC0D559E241128EF0045A55D /* PropertyPreview.swift */,
-				CC0D55A4241133250045A55D /* DefaultPropertyPreviews.swift */,
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
-/* Begin PBXHeadersBuildPhase section */
-		CC1579322404994600185C2E /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				CC15793C2404994600185C2E /* SwiftGUI.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXHeadersBuildPhase section */
-
 /* Begin PBXNativeTarget section */
-		CC1579362404994600185C2E /* SwiftGUI */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = CC15793F2404994600185C2E /* Build configuration list for PBXNativeTarget "SwiftGUI" */;
-			buildPhases = (
-				CC1579322404994600185C2E /* Headers */,
-				CC1579332404994600185C2E /* Sources */,
-				CC1579342404994600185C2E /* Frameworks */,
-				CC1579352404994600185C2E /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = SwiftGUI;
-			packageProductDependencies = (
-				CC15794324049E0000185C2E /* Runtime */,
-			);
-			productName = SwiftGUI;
-			productReference = CC1579372404994600185C2E /* SwiftGUI.framework */;
-			productType = "com.apple.product-type.framework";
-		};
 		CC15795124049F7700185C2E /* Example */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = CC15796324049F7C00185C2E /* Build configuration list for PBXNativeTarget "Example" */;
@@ -230,11 +120,11 @@
 			buildRules = (
 			);
 			dependencies = (
-				CC15796A24049F9100185C2E /* PBXTargetDependency */,
 			);
 			name = Example;
 			packageProductDependencies = (
 				CC0D55A2241130820045A55D /* URLImage */,
+				02699F8E25E4A06C0062884D /* SwiftGUI */,
 			);
 			productName = Example;
 			productReference = CC15795224049F7700185C2E /* Example.app */;
@@ -250,10 +140,6 @@
 				LastUpgradeCheck = 1200;
 				ORGANIZATIONNAME = Yonas;
 				TargetAttributes = {
-					CC1579362404994600185C2E = {
-						CreatedOnToolsVersion = 11.4;
-						LastSwiftMigration = 1140;
-					};
 					CC15795124049F7700185C2E = {
 						CreatedOnToolsVersion = 11.4;
 					};
@@ -269,27 +155,18 @@
 			);
 			mainGroup = CC15792D2404994600185C2E;
 			packageReferences = (
-				CC15794224049E0000185C2E /* XCRemoteSwiftPackageReference "Runtime" */,
 				CC15794524049E2900185C2E /* XCRemoteSwiftPackageReference "url-image" */,
 			);
 			productRefGroup = CC1579382404994600185C2E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				CC1579362404994600185C2E /* SwiftGUI */,
 				CC15795124049F7700185C2E /* Example */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		CC1579352404994600185C2E /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		CC15795024049F7700185C2E /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -303,25 +180,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		CC1579332404994600185C2E /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				CC15796F2404A64600185C2E /* Property.swift in Sources */,
-				CCDDCAD6240E790B00DDA3C2 /* EnumView.swift in Sources */,
-				CC0D559D240FA2DE0045A55D /* UnknownView.swift in Sources */,
-				CC15794D24049E7000185C2E /* SwiftUIExtensions.swift in Sources */,
-				CC15794924049E3D00185C2E /* ObjectView.swift in Sources */,
-				CCDDCAD424068DCE00DDA3C2 /* Config.swift in Sources */,
-				CC15794B24049E5C00185C2E /* SanitizedType.swift in Sources */,
-				CC0D55A5241133250045A55D /* DefaultPropertyPreviews.swift in Sources */,
-				CCDDCAD8240E877200DDA3C2 /* SwiftView.swift in Sources */,
-				CCDDCAD224068BBE00DDA3C2 /* ArrayView.swift in Sources */,
-				CC15796D24049FA700185C2E /* TestObject.swift in Sources */,
-				CC0D559F241128EF0045A55D /* PropertyPreview.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		CC15794E24049F7700185C2E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -334,14 +192,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		CC15796A24049F9100185C2E /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = CC1579362404994600185C2E /* SwiftGUI */;
-			targetProxy = CC15796924049F9100185C2E /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		CC15795F24049F7C00185C2E /* LaunchScreen.storyboard */ = {
@@ -477,65 +327,14 @@
 			};
 			name = Release;
 		};
-		CC1579402404994600185C2E /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = SwiftGUI/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.yonaskolb.SwiftGUI;
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		CC1579412404994600185C2E /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = SwiftGUI/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.yonaskolb.SwiftGUI;
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
 		CC15796424049F7C00185C2E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = "\"Example/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"Preview Content\"";
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = Example/Info.plist;
+				INFOPLIST_FILE = Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -553,9 +352,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = "\"Example/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"Preview Content\"";
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = Example/Info.plist;
+				INFOPLIST_FILE = Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -580,15 +379,6 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		CC15793F2404994600185C2E /* Build configuration list for PBXNativeTarget "SwiftGUI" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				CC1579402404994600185C2E /* Debug */,
-				CC1579412404994600185C2E /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		CC15796324049F7C00185C2E /* Build configuration list for PBXNativeTarget "Example" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -601,14 +391,6 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		CC15794224049E0000185C2E /* XCRemoteSwiftPackageReference "Runtime" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/yonaskolb/Runtime";
-			requirement = {
-				branch = master;
-				kind = branch;
-			};
-		};
 		CC15794524049E2900185C2E /* XCRemoteSwiftPackageReference "url-image" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/dmytro-anokhin/url-image";
@@ -620,15 +402,14 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		02699F8E25E4A06C0062884D /* SwiftGUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = SwiftGUI;
+		};
 		CC0D55A2241130820045A55D /* URLImage */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = CC15794524049E2900185C2E /* XCRemoteSwiftPackageReference "url-image" */;
 			productName = URLImage;
-		};
-		CC15794324049E0000185C2E /* Runtime */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = CC15794224049E0000185C2E /* XCRemoteSwiftPackageReference "Runtime" */;
-			productName = Runtime;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

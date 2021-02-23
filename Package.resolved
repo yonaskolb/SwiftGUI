@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "Runtime",
+        "repositoryURL": "https://github.com/yonaskolb/Runtime",
+        "state": {
+          "branch": "master",
+          "revision": "de49d47a96d8f0024f81c96babf0e5607d3416c5",
+          "version": null
+        }
+      }
+    ]
+  },
+  "version": 1
+}

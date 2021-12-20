@@ -14,7 +14,7 @@ let package = Package(
             targets: ["SwiftGUI"]),
     ],
     dependencies: [
-        .package(name: "Runtime", url: "https://github.com/yonaskolb/Runtime", .branch("master")),
+        .package(name: "Runtime", url: "https://github.com/wickwirew/Runtime", from: "2.2.4"),
     ],
     targets: [
         .target(

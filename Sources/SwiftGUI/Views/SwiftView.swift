@@ -34,7 +34,6 @@ public struct SwiftView: View {
     public var body: some View {
         UnknownView(value: $value)
         .environmentObject(config)
-        .navigationBarTitle(Text(name), displayMode: .inline)
     }
 }
 

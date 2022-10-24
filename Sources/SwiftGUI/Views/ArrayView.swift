@@ -19,8 +19,8 @@ struct ArrayView: View {
     }
 
     var body: some View {
-        List(0..<array.count) { index in
-            Text(String(describing: self.array[index]))
+        List(Array(0 ..< array.count), id: \.self) { index in
+            Text("\(index): " + String(describing: self.array[index]))
                 .lineLimit(1)
                 .swiftLink(self.$array[index], config: config)
         }
@@ -33,5 +33,6 @@ struct ArrayView_Previews: PreviewProvider {
             ArrayView(array: .constant([TestStruct(), TestStruct()]))
             ArrayView(array: .constant([1, 2]))
         }
+        .environmentObject(Config())
     }
 }

@@ -59,7 +59,7 @@ struct UnknownView: View {
 
 struct RootNavTitleKey: EnvironmentKey {
 
-    static var defaultValue: Bool = false
+    static var defaultValue: Bool = true
 }
 
 extension EnvironmentValues {

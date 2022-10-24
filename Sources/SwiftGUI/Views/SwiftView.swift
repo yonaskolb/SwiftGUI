@@ -39,8 +39,11 @@ public struct SwiftView: View {
 
 struct SwiftView_Previews: PreviewProvider {
     static var previews: some View {
-        NavigationView {
-            SwiftView(value: .constant(TestObject()), config: Config(editing: true))
+        Group {
+            NavigationView {
+                SwiftView(value: .constant(TestObject()), config: Config(editing: true))
+            }
+            SwiftView(value: .constant("Some text. Some text. Some text. Some text. Some text. Some text. Some text. Some text. "))
         }
     }
 }

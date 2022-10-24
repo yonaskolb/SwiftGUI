@@ -3,11 +3,11 @@
     "pins": [
       {
         "package": "Runtime",
-        "repositoryURL": "https://github.com/yonaskolb/Runtime",
+        "repositoryURL": "https://github.com/wickwirew/Runtime",
         "state": {
-          "branch": "master",
-          "revision": "de49d47a96d8f0024f81c96babf0e5607d3416c5",
-          "version": null
+          "branch": null,
+          "revision": "dad03135d7701a4e7b3a4051e75d6b37bd8e178e",
+          "version": "2.2.4"
         }
       }
     ]

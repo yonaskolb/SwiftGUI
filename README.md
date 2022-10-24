@@ -4,5 +4,7 @@ A SwiftUI GUI for browsing and editing pure Swift objects. It's useful as a debu
 
 It supports Swift structs, classes, and enums with associated types.
 
+<img src="Screenshot.png" width="200"/>
+
 ## Development
 Note that this project is still in development. It is missing features, and could be unstable.

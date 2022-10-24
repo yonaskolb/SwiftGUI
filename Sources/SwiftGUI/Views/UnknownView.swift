@@ -25,12 +25,13 @@ struct UnknownView: View {
 
     public var body: some View {
         Group {
-            if isSimpleType(value) {
+            if typeInfo.kind == .optional {
+                OptionalView(value: $value)
+            } else if isSimpleType(value) {
                 ScrollView {
                     Text(String(describing: value))
                         .padding()
                 }
-
             } else if typeInfo.kind == .struct || typeInfo.kind == .class {
                 ObjectView($value)
             } else if typeInfo.kind == .enum {

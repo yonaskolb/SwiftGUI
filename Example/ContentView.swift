@@ -12,10 +12,11 @@ import SwiftGUI
 struct ContentView: View {
 
     let config: Config
-    @State var object = TestObject()
+    @State var object: TestObject? = TestObject()
     @State var openObject = false
 
     var objectDump: String {
+        guard let object = object else { return ""}
         var string = ""
         dump(object, to: &string)
         return string

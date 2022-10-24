@@ -32,8 +32,12 @@ public struct SwiftView: View {
     }
 
     public var body: some View {
-        UnknownView(value: $value)
+        UnknownView(value: $value, isRoot: true)
         .environmentObject(config)
+    }
+
+    public func showRootNavTitle(_ show: Bool) -> some View {
+       self.environment(\.showRootNavTitle, false)
     }
 }
 

@@ -7,10 +7,13 @@ struct ObjectView: View {
     @Binding private var object: Any
     private var properties: [Property]
     private let typeInfo: TypeInfo
+    private let isRoot: Bool
 
     @EnvironmentObject var config: Config
+    @Environment(\.showRootNavTitle) var showRootNavTitle
 
-    init(_ binding: Binding<Any>) {
+    init(_ binding: Binding<Any>, isRoot: Bool = false) {
+        self.isRoot = isRoot
         let object = binding.wrappedValue
         self._object = binding
         self.typeInfo = try! Runtime.typeInfo(of: type(of: object))
@@ -116,13 +119,20 @@ struct ObjectView: View {
     }
 
     var body: some View {
+        if !isRoot || showRootNavTitle {
+            list
+#if os(iOS)
+                .navigationBarTitle(Text(name), displayMode: .inline)
+#endif
+        } else {
+            list
+        }
+    }
+
+    var list: some View {
         List(properties) { property in
             self.propertyEditor(property)
         }
-#if os(iOS)
-        .navigationBarTitle(Text(name), displayMode: .inline)
-#endif
-        //.navigationBarItems(trailing: editButton)
     }
 }
 

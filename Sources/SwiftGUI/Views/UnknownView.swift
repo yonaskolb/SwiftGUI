@@ -13,10 +13,13 @@ import Runtime
 struct UnknownView: View {
 
     @Binding var value: Any
+    private let isRoot: Bool
     private var name: String
     let typeInfo: TypeInfo
+    @Environment(\.showRootNavTitle) var showRootNavTitle
 
-    init(value binding: Binding<Any>) {
+    init(value binding: Binding<Any>, isRoot: Bool = false) {
+        self.isRoot = isRoot
         let value = binding.wrappedValue
         name = santizedType(of: value)
         typeInfo = try! Runtime.typeInfo(of: type(of: value))
@@ -24,6 +27,17 @@ struct UnknownView: View {
     }
 
     public var body: some View {
+        if !isRoot || showRootNavTitle {
+            content
+#if os(iOS)
+            .navigationBarTitle(Text(name), displayMode: .inline)
+#endif
+        } else {
+            content
+        }
+    }
+
+    var content: some View {
         Group {
             if typeInfo.kind == .optional {
                 OptionalView(value: $value)
@@ -33,16 +47,30 @@ struct UnknownView: View {
                         .padding()
                 }
             } else if typeInfo.kind == .struct || typeInfo.kind == .class {
-                ObjectView($value)
+                ObjectView($value, isRoot: isRoot)
             } else if typeInfo.kind == .enum {
                 EnumView($value)
             } else {
                 Text(String(describing: value))
             }
         }
-#if os(iOS)
-        .navigationBarTitle(Text(name), displayMode: .inline)
-#endif
+    }
+}
+
+struct RootNavTitleKey: EnvironmentKey {
+
+    static var defaultValue: Bool = false
+}
+
+extension EnvironmentValues {
+
+    public var showRootNavTitle: Bool {
+        get {
+            self[RootNavTitleKey.self]
+        }
+        set {
+            self[RootNavTitleKey.self] = newValue
+        }
     }
 }
 

@@ -40,7 +40,9 @@ struct UnknownView: View {
                 Text(String(describing: value))
             }
         }
+#if os(iOS)
         .navigationBarTitle(Text(name), displayMode: .inline)
+#endif
     }
 }
 

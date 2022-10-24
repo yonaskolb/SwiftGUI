@@ -59,11 +59,13 @@ struct ObjectView: View {
     func propertyEditor(_ property: Property) -> AnyView {
 
         func navigation<D: View, C: View>(_ destination: D, @ViewBuilder content: () -> C) -> AnyView {
-            NavigationLink(destination: destination
-                            .environmentObject(config)
-                            .navigationBarTitle(property.name)) {
+            let destinationView = destination
+                .environmentObject(config)
+#if os(iOS)
+                .navigationBarTitle(property.name)
+#endif
+            return NavigationLink(destination: destinationView) {
                content()
-
                 //.navigationBarItems(trailing: editButton)
             }.anyView
         }
@@ -117,7 +119,9 @@ struct ObjectView: View {
         List(properties) { property in
             self.propertyEditor(property)
         }
+#if os(iOS)
         .navigationBarTitle(Text(name), displayMode: .inline)
+#endif
         //.navigationBarItems(trailing: editButton)
     }
 }

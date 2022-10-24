@@ -69,7 +69,9 @@ struct IntPropertyPreview: PropertyPreview {
             if context.config.editing {
                 TextField("", text: stringBinding)
                 .textFieldStyle(RoundedBorderTextFieldStyle())
+#if os(iOS)
                 .keyboardType(.numberPad)
+#endif
                 .multilineTextAlignment(.trailing)
             } else {
                 Text(context.value.description).font(.largeTitle)
@@ -95,7 +97,9 @@ struct DoublePropertyPreview: PropertyPreview {
             if context.config.editing {
                 TextField("", text: stringBinding)
                 .textFieldStyle(RoundedBorderTextFieldStyle())
+#if os(iOS)
                 .keyboardType(.numberPad)
+#endif
                 .multilineTextAlignment(.trailing)
             } else {
                 Text(context.value.description).font(.largeTitle)

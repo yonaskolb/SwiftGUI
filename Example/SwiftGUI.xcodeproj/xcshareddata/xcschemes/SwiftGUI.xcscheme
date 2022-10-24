@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "CC1579362404994600185C2E"
-               BuildableName = "SwiftGUI.framework"
+               BlueprintIdentifier = "SwiftGUI"
+               BuildableName = "SwiftGUI"
                BlueprintName = "SwiftGUI"
-               ReferencedContainer = "container:SwiftGUI.xcodeproj">
+               ReferencedContainer = "container:..">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -47,15 +47,6 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "CC1579362404994600185C2E"
-            BuildableName = "SwiftGUI.framework"
-            BlueprintName = "SwiftGUI"
-            ReferencedContainer = "container:SwiftGUI.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">

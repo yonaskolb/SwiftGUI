@@ -59,50 +59,56 @@ struct ObjectView: View {
         }
     }
 
-    func propertyEditor(_ property: Property) -> AnyView {
-
-        func navigation<D: View, C: View>(_ destination: D, @ViewBuilder content: () -> C) -> AnyView {
-            let destinationView = destination
+    func link<D: View, C: View>(_ property: Property, @ViewBuilder destination:  () -> D, @ViewBuilder content: () -> C) -> some View {
+        NavigationLink {
+            destination()
                 .environmentObject(config)
 #if os(iOS)
                 .navigationBarTitle(property.name)
 #endif
-            return NavigationLink(destination: destinationView) {
-               content()
-                //.navigationBarItems(trailing: editButton)
-            }.anyView
+        } label: {
+            content()
         }
-        let propertyBinding = getPropertyBinding(property)
-        if let preview = config.getPreview(for: property, with: propertyBinding) {
+    }
+
+    @ViewBuilder
+    func propertyEditor(_ property: Property) -> some View {
+        if let preview = config.getPreview(for: property, with: getPropertyBinding(property)) {
             if preview.config.canNavigate || preview.config.customView {
                 if let childView = preview.childView {
-                    return navigation(childView) {
+                    link(property) {
+                        childView
+                    } content: {
                         propertyRow(property, axis: preview.config.axis) {
                             preview.view
                         }
                     }
                 } else {
-                    return navigation(UnknownView(value: propertyBinding)) {
+                    link(property) {
+                        UnknownView(value: getPropertyBinding(property))
+                    } content: {
                         propertyRow(property, axis: preview.config.axis) {
                             preview.view
                         }
                     }
                 }
             } else {
-                return propertyRow(property, axis: preview.config.axis) {
+                propertyRow(property, axis: preview.config.axis) {
                     preview.view
-                }.anyView
+                }
             }
         } else if let value = property.value {
-            return navigation(UnknownView(value: propertyBinding)) {
+            link(property) {
+                UnknownView(value: getPropertyBinding(property))
+            } content: {
                 propertyRow(property) {
-                    Text(String(describing: value)).lineLimit(1).anyView
+                    Text(String(describing: value)).lineLimit(1)
                 }
             }
         } else {
-            return propertyRow(property) {
-                Text("nil").foregroundColor(.gray).anyView
-            }.anyView
+            propertyRow(property) {
+                Text("nil").foregroundColor(.gray)
+            }
         }
     }
 

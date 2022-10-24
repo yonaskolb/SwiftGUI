@@ -45,9 +45,18 @@ struct SwiftView_Previews: PreviewProvider {
     static var previews: some View {
         Group {
             NavigationView {
-                SwiftView(value: .constant(TestObject()), config: Config(editing: true))
+                Container(state: TestObject(), config: Config(editing: true))
             }
-            SwiftView(value: .constant("Some text. Some text. Some text. Some text. Some text. Some text. Some text. Some text. "))
+            Container(state: "Some text. Some text. Some text. Some text. Some text. Some text. Some text. Some text. ")
+        }
+    }
+
+    struct Container<S>: View {
+        @State var state: S
+        var config = Config()
+
+        var body: some View {
+            SwiftView(value: $state, config: config)
         }
     }
 }

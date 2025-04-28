@@ -18,8 +18,8 @@ public class Config: ObservableObject {
     
     var propertyPreviews: [PropertyPreviewRenderer] = []
     
-    // replaces underscores and removes "$" properties (like "_$observationRegistrar")
-    public static func defaultPropertyFilter(property: String) -> String? {
+    // replaces underscore prefixes and removes "$" properties (like "_$observationRegistrar")
+    public static func prettyPropertyFilter(property: String) -> String? {
         var name = property
         if name.hasPrefix("_") {
             name = String(name.dropFirst())
@@ -34,7 +34,7 @@ public class Config: ObservableObject {
         editing: Bool = true,
         allowEditingToggle: Bool = false,
         addDefaultProperties: Bool = true,
-        propertyFilter: @escaping (String) -> String? = Config.defaultPropertyFilter
+    	propertyFilter: @escaping (String) -> String? = { $0 }
     ) {
         self.editing = editing
         self.allowEditingToggle = allowEditingToggle

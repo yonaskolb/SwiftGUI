@@ -13,11 +13,32 @@ public class Config: ObservableObject {
 
     @Published public var editing: Bool
     @Published public var allowEditingToggle: Bool
+    /// filters a property name. Return nil to filter out property entirely
+    @Published public var propertyFilter: (String) -> String?
+    
     var propertyPreviews: [PropertyPreviewRenderer] = []
+    
+    // replaces underscores and removes "$" properties (like "_$observationRegistrar")
+    public static func defaultPropertyFilter(property: String) -> String? {
+        var name = property
+        if name.hasPrefix("_") {
+            name = String(name.dropFirst())
+        }
+        if name.hasPrefix("$") {
+            return nil
+        }
+        return name
+    }
 
-    public init(editing: Bool = true, allowEditingToggle: Bool = false, addDefaultProperties: Bool = true) {
+    public init(
+        editing: Bool = true,
+        allowEditingToggle: Bool = false,
+        addDefaultProperties: Bool = true,
+        propertyFilter: @escaping (String) -> String? = Config.defaultPropertyFilter
+    ) {
         self.editing = editing
         self.allowEditingToggle = allowEditingToggle
+        self.propertyFilter = propertyFilter
         if addDefaultProperties {
             addDefaultPropertyPreviews()
         }

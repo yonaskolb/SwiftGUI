@@ -11,6 +11,12 @@ struct ObjectView: View {
 
     @EnvironmentObject var config: Config
     @Environment(\.showRootNavTitle) var showRootNavTitle
+    
+    var filteredProperties: [Property] {
+        properties.filter {
+            config.propertyFilter($0.name) != nil
+        }
+    }
 
     init(_ binding: Binding<Any>, isRoot: Bool = false) {
         self.isRoot = isRoot
@@ -20,7 +26,7 @@ struct ObjectView: View {
         name = santizedType(of: object)
 
         properties = typeInfo.properties.compactMap {
-            try? Property(type: object, propertyInfo: $0)
+            return try? Property(type: object, propertyInfo: $0)
         }
     }
 
@@ -34,8 +40,8 @@ struct ObjectView: View {
     func propertyRow<V: View>(_ property: Property, axis: Axis = .horizontal, @ViewBuilder content: () -> V) -> some View {
 
         func info() -> some View {
-            (Text("\(property.name): ") + Text(property.typeName).bold())
-            .lineLimit(1)
+            (Text("\(config.propertyFilter(property.name) ?? ""): ") + Text(property.typeName).bold())
+                .lineLimit(1)
         }
 
         let contentView = content()
@@ -136,7 +142,7 @@ struct ObjectView: View {
     }
 
     var list: some View {
-        List(properties) { property in
+        List(filteredProperties) { property in
             self.propertyEditor(property)
         }
     }
